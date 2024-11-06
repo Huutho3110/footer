@@ -40,7 +40,7 @@ footer .cot  a{
      color: #ccc;
      text-decoration: none;
 }footer .cot  a:hover{
-     
+     color: yellow;
      text-decoration: underline;
 }
 
