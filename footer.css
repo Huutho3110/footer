@@ -135,3 +135,32 @@ footer .card img {
 footer .footer-bottom img {
     max-width: 50px; 
 }
+
+@media only screen and (max-width: 768px) {
+    footer .cot {
+        width: 48%;
+        margin: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    footer .cot {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    footer .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .footer-bottom a,
+    footer .footer-bottom p {
+        padding: 10px 0;
+    }
+
+    footer .cot .newsletter input,
+    footer .cot .newsletter button {
+        width: 100%;
+    }
+}
