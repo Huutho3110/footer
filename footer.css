@@ -28,7 +28,8 @@ footer .logo {
 }
 
 footer .cot .logo img {
-    height: 40px; 
+    height: 100px;
+	width:100px;
     margin-right: 10px; 
 }
 
