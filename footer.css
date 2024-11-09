@@ -17,7 +17,10 @@ footer .cot {
    width: 22%;
     margin: 0 10px;
 	min-width: 200px; 
+
+    
 }
+
 
 footer .logo {
     display: flex;
@@ -73,8 +76,10 @@ footer .cot p {
     text-align: justify; 
 }
 footer .cot img {
-    height:120px;
-	width:120px;
+   width: 10vw;
+	height:10vw;
+        min-width: 100px;
+        max-width: 200px;
 }
 footer .cot img:hover {
     transform: scale(1.05); /* Phóng to ảnh khi hover */
@@ -123,44 +128,62 @@ footer .footer-bottom p {
 }
 
 footer .footer-bottom a:hover {
-    text-decoration: underline; /* Gạch dưới liên kết khi hover */
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(135deg, #f00 0%, #f0f 100%);
 }
 
 footer .card img {
     margin-right: 10px;
-    height: 30px; 
-    width: 50px; 
+    height: 3vw; 
+    width: 5vw; 
 }
 
 footer .footer-bottom img {
     max-width: 50px; 
 }
 
-@media only screen and (max-width: 768px) {
+/* Media Queries */
+@media screen and (max-width: 768px) {
     footer .cot {
-        width: 48%;
-        margin: 10px 0;
+        width: 48%; /* Chia thành 2 cột khi màn hình nhỏ */
+        margin: 10px 0; /* Tăng khoảng cách giữa các cột */
+    }
+
+    footer .cot .logo h3 {
+        font-size: 14px;
+    }
+
+    footer .cot .newsletter input {
+        width: 90%;
+    }
+
+    footer .footer-bottom {
+        flex-direction: column; /* Xếp các phần tử theo chiều dọc */
+        align-items: center; /* Căn giữa các phần tử */
+    }
+
+    footer .footer-bottom a {
+        margin: 5px 0; /* Tăng khoảng cách giữa các liên kết */
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     footer .cot {
-        width: 100%;
+        width: 100%; /* Full width cho các phần tử trong footer */
         margin: 10px 0;
     }
 
     footer .footer-bottom {
-        flex-direction: column;
-        text-align: center;
+        padding: 20px;
     }
 
-    footer .footer-bottom a,
+    footer .footer-bottom a {
+        font-size: 14px; /* Giảm kích thước chữ */
+    }
+
     footer .footer-bottom p {
-        padding: 10px 0;
-    }
-
-    footer .cot .newsletter input,
-    footer .cot .newsletter button {
-        width: 100%;
+        font-size: 14px;
+        text-align: center;
     }
 }
